@@ -1,0 +1,10 @@
+[Unit]
+Description=Nginx service
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/nginx/sbin/nginx -p /path/to/nginx
+
+[Install]
+WantedBy=multi-user.target
